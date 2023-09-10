@@ -1,0 +1,382 @@
+{% extends "base.html"%}
+
+{% block title %}Controls{% endblock%}
+
+
+{% block content%}
+
+    <div class="heading-container">
+      <h1 class="greeting">Controls</h1>
+      <!-- <div class="global-clock">
+        <span></span>
+      </div> -->
+    </div>
+
+
+    <div class="cards-container">
+          <!-- Floor plan -->
+          <div class="filter_card">
+              <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('living-room')"> Living Room</button>
+                <button class="btn" onclick="filterSelection('kitchen')"> Kitchen</button>
+                <button class="btn" onclick="filterSelection('bdrm1')"> Bedroom 1</button>
+                <button class="btn" onclick="filterSelection('bdrm2')"> Bedroom 2</button>
+                <button class="btn" onclick="filterSelection('bdrm3')"> Bedroom 3</button>
+                <button class="btn" onclick="filterSelection('bath1')"> Bathroom 1</button>
+                <button class="btn" onclick="filterSelection('bath2')"> Bathroom 2</button>
+                <button class="btn" onclick="filterSelection('laundry')"> Laundry</button>
+              </div>
+            
+              <!-- The filterable elements-->
+              <div class="container filters">
+
+                <!-- LIVING ROOM -->
+                  <div class="light-switch filterDiv living-room" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-tv"></i>
+                    <div class="name">TV</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv living-room" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="name">Overhead Light</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv living-room" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="name">Lamp 1</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv living-room" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="name">Lamp 2</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv living-room" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-house-chimney-window"></i>
+                    <div class="name">Window 1</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv living-room" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-house-chimney-window"></i>
+                    <div class="name">Window 2</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv living-room" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-house-chimney-window"></i>
+                    <div class="name">Window 3</div>
+                    <div class="status">Off</div>
+                  </div>
+
+                  <!-- KITCHEN -->
+
+                  <div class="light-switch filterDiv kitchen" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="name">Overhead Light</div>
+                    <div class="status">Off</div>
+                  </div>
+    
+                  <div class="light-switch filterDiv kitchen" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-refrigerator"></i>
+                    <div class="name">Refrigerator</div>
+                    <div class="status">Off</div>
+                  </div>
+                  
+                  <div class="light-switch filterDiv kitchen" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-oven"></i>
+                    <div class="name">Oven</div>
+                    <div class="status">Off</div>
+                  </div>
+
+                  <div class="light-switch filterDiv kitchen" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-oven"></i>
+                    <div class="name">Stove</div>
+                    <div class="status">Off</div>
+                  </div>
+
+                  <div class="light-switch filterDiv kitchen" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-microwave"></i>
+                    <div class="name">Microwave</div>
+                    <div class="status">Off</div>
+                  </div>
+
+                  <div class="light-switch filterDiv kitchen" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-sink"></i>
+                    <div class="name">Dishwasher</div>
+                    <div class="status">Off</div>
+                  </div>
+
+                  <div class="light-switch filterDiv kitchen" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-house-chimney-window"></i>
+                    <div class="name">Window 1</div>
+                    <div class="status">Off</div>
+                  </div>
+
+                  <div class="light-switch filterDiv kitchen" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-house-chimney-window"></i>
+                    <div class="name">Window 2</div>
+                    <div class="status">Off</div>
+                  </div>
+
+                  <!-- Bedroom 1 -->
+                  <div class="light-switch filterDiv bdrm1" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="name">Overhead Light</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv bdrm1" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-tv"></i>
+                    <div class="name">TV</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv bdrm1" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="name">Lamp 1</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv bdrm1" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="name">Lamp 2</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv bdrm1" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-house-chimney-window"></i>
+                    <div class="name">Window 1</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv bdrm1" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-house-chimney-window"></i>
+                    <div class="name">Window 2</div>
+                    <div class="status">Off</div>
+                  </div>
+
+                  <!-- BEDROOM 2 -->
+
+                  <div class="light-switch filterDiv bdrm2" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="name">Overhead Light</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv bdrm2" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="name">Lamp 1</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv bdrm2" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="name">Lamp 2</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv bdrm2" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-house-chimney-window"></i>
+                    <div class="name">Window 1</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv bdrm2" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-house-chimney-window"></i>
+                    <div class="name">Window 2</div>
+                    <div class="status">Off</div>
+                  </div>
+
+                  <!-- BEDROOM 3 -->
+
+                  <div class="light-switch filterDiv bdrm3" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="name">Overhead Light</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv bdrm3" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="name">Lamp 1</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv bdrm3" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="name">Lamp 2</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv bdrm3" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-house-chimney-window"></i>
+                    <div class="name">Window 1</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv bdrm3" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-house-chimney-window"></i>
+                    <div class="name">Window 2</div>
+                    <div class="status">Off</div>
+                  </div>
+
+                  <!-- Bathroom 1 -->
+
+                  <div class="light-switch filterDiv bath1" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="name">Overhead Light</div>
+                    <div class="status">Off</div>
+                  </div>
+
+                  <div class="light-switch filterDiv bath1" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-fan"></i>
+                    <div class="name">Exhaust Fan</div>
+                    <div class="status">Off</div>
+                  </div>
+
+                  <div class="light-switch filterDiv bath1" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-house-chimney-window"></i>
+                    <div class="name">Window</div>
+                    <div class="status">Off</div>
+                  </div>
+
+                  <!-- Bathroom 2 -->
+
+                  <div class="light-switch filterDiv bath2" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div class="name">Overhead Light</div>
+                    <div class="status">Off</div>
+                  </div>
+
+                  <div class="light-switch filterDiv bath2" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-fan"></i>
+                    <div class="name">Exhaust Fan</div>
+                    <div class="status">Off</div>
+                  </div>
+
+                  <div class="light-switch filterDiv bath2" id="" onclick="toggleSwitch(this)">
+                    <i class="fa-solid fa-house-chimney-window"></i>
+                    <div class="name">Window</div>
+                    <div class="status">Off</div>
+                  </div>
+
+
+                  <!-- Laundry -->
+
+                  <div class="light-switch filterDiv laundry" id="" onclick="toggleSwitch(this)">
+                    <!-- <i class="fa-solid fa-washing-machine"></i> -->
+                    <div class="name">Washer</div>
+                    <div class="status">Off</div>
+                  </div>
+                  <div class="light-switch filterDiv laundry" id="" onclick="toggleSwitch(this)">
+                    <!-- <i class="fa-solid fa-dryer"></i> -->
+                    <div class="name">Dryer</div>
+                    <div class="status">Off</div>
+                  </div>
+
+              </div>
+        </div>
+      
+        <!-- HVAC -->
+        <div class="card card-row1 card2">
+          <h1 class="title_hvac">HVAC</h1>
+          <div class="hvac">
+      
+            <div class="controls_hvac">
+              <button class="control-button minus"><i class="fa-solid fa-caret-down"></i></button>
+            </div>
+      
+            <div id="thermostat" class="thermostat_hvac">
+      
+              <span class="temperature_hvac"></span>
+            </div>
+      
+            <div class="controls_hvac">
+              <button class="control-button plus"><i class="fa-solid fa-caret-up"></i></button>
+            </div>
+          </div>
+      
+          <span class="outer-temp">
+            <h5 style="margin-right: 10px;">Outside Temperature:</h5>
+            <span class="degree1" style="font-size: 14px"></span>
+          </span>
+          <li class="inner-temp">
+            <h5 style="margin-right: 10px;">Inside Temperature:</h5>
+            <span style="font-weight: bold;"></span>
+          </li>
+    
+      
+        </div>
+      
+        <!-- light switches -->
+        <!-- <div class="card card-row2">
+            <h1 class="title">Scenarios</h1>
+        </div> -->
+            
+      </div>
+
+      <script>
+
+        filterSelection("living-room")
+
+        function toggleSwitch(switchElem) {
+          switchElem.classList.toggle('on');
+          const statusElem = switchElem.querySelector('.status');
+          const currentStatus = statusElem.textContent;
+          statusElem.textContent = currentStatus === 'Off' ? 'On' : 'Off';
+        }
+
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("filterDiv");
+          if (c == "all") c = "";
+          // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+
+        // Show filtered elements
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {
+              element.className += " " + arr2[i];
+            }
+          }
+        }
+
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current control button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+
+        switchButtons.forEach(function(switchButton) {
+          switchButton.addEventListener("click", function() {
+            const id = switchButton.id.split("-")[1];
+            const lightOn = document.querySelector(`#light-${id}`);
+            // console.log(lightOn);
+
+            if (lightOn.style.opacity === "100") {
+              // console.log(lightOn);
+              lightOn.style.opacity = "0";
+            } 
+
+            else{
+              lightOn.style.opacity = "100";
+            }
+          });
+        });
+
+
+      </script>
+
+
+{% endblock %}

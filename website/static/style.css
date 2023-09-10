@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+.greeting {
+  margin-left: 50px;
+  padding-left: 15px;
+  color: white;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 75px;
+  background: #59514c;
+  /* padding: 6px 14px; */
+  z-index: 99;
+  transition: all 0.5s ease;
+  text-align: center;
+}
+
+.sidebar .nav-list {
+  list-style-type: none;
+}
+
+.sidebar .nav-list li {
+  margin-top: 30px;
+  padding: 20px 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.sidebar .nav-list a {
+  display: flex;
+  color: #fff;
+}
+
+.sidebar .list-elements {
+  /* display: flex; */
+  text-align: center;
+}
+
+.sidebar i {
+  color: #fff;
+  font-size: 35px;
+  /* text-align: center; */
+  background-color: dimgrey;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  padding: 5px;
+}
+
+/* icon backgrounds hover effect*/
+.sidebar i:hover {
+  background: darkgray;
+}
+
+.sidebar li a .links_name {
+  visibility: hidden;
+  opacity: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.sidebar li a .links_name {
+  transition: all 0.5s ease;
+}
+
+.sidebar li:hover .links_name {
+  visibility: visible;
+  opacity: 1;
+  border-radius: 12px;
+  background-color: #59514c;
+  margin-left: 30px;
+  padding: 10px;
+}
+
+.heading-container {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.global-clock {
+  padding: 5px 5px;
+  margin-left: 5px;
+  background-color: rgb(255, 255, 255);
+  z-index: 3;
+  border-radius: 50px;
+  text-align: center;
+  width: fit-content;
+}
+
+.global-clock > span {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.watts-container {
+  display: flex;
+  align-items: center;
+}
+
+.watts-container > button {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  transition: all 400ms ease-in-out;
+}
+
+.watts-container > button:hover {
+  cursor: pointer;
+  background-color: #b8dcc1;
+  border-color: #9ecaa8;
+}
+
+.watts-container > span {
+  background-color: rgb(242, 242, 242);
+  box-shadow: 5px 5px 20px #b7c5d4, -5px -5px 20px #ffffff;
+  margin: 0px 10px;
+}
+
+.home-section {
+  position: relative;
+  background-color: #a09289;
+  min-height: 100vh;
+  top: 0;
+  margin-left: 0px;
+  padding-left: 40px;
+  padding-top: 20px;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.floor_plan {
+  padding: 25px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.unselectable {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard syntax */
+}
+
+.cards-container {
+  /* width: 80%; */
+  height: 100vh;
+  margin-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.card-row1 {
+  height: 60%;
+}
+
+.card {
+  width: 49%;
+  /* height: 45%; */
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card3 {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-template-rows: repeat(2, 120px);
+  grid-gap: 25px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.card3-item {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  border-radius: 20px;
+  /* box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2); */
+  box-shadow: 5px 5px 20px #b7c5d4, -5px -5px 20px #ffffff;
+}
+
+.turnOnOff {
+  opacity: 1;
+}
+
+.card2-container {
+  /* width: 90%;
+  height: 90%; */
+  margin: auto;
+  margin-top: 12px;
+  justify-content: center; /* center the content horizontally */
+  align-items: flex-start;
+  background-color: white;
+}
+
+.title {
+  margin-top: 0;
+  padding: 10px;
+}
+
+.weather {
+  margin-top: 5%;
+}
+
+.temperature {
+  display: flex;
+}
+
+.weather-img {
+  margin-left: 100px;
+}
+
+.light-switch {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  /* border: 1px solid #ccc; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.light-switch-more-control {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  /* border: 1px solid #ccc; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.light-switch.on {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  transition: all 0.5s ease;
+}
+
+.light-switch .icon {
+  font-size: 48px;
+}
+
+.light-switch .name {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.light-switch-more-control .name {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.light-switch .status {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.hvac-temp-list {
+  display: flex;
+  list-style: none;
+  font-size: 2vw;
+  gap: 5px;
+}
+
+.hvac-temp-list > li {
+  background-color: #f5f5f5;
+  border-style: solid;
+  border-color: rgb(204, 204, 204);
+  border-width: 1px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 35px 0px rgb(0 0 0 / 20%);
+  padding: 10px;
+  flex: 1;
+  font-size: min(1.1vw, 3vh);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inner-temp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.inner-temp h5 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.outer-temp {
+  display: flex;
+  flex-direction: row;
+  font-size: large;
+  justify-content: center;
+}
+
+.hvac-temp-list > li:last-child {
+  padding: 10px 0px;
+  position: relative;
+}
+
+.hvac-temp-list > li > h5 {
+  font-size: inherit;
+}
+
+.set-temp > .btn-container {
+  position: absolute;
+  top: 22%;
+  right: 7%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* 0.8, 1.5 */
+.set-temp > .btn-container > button:first-child {
+  width: 0;
+  height: 0;
+  border-top: transparent;
+  border-left: min(0.8vw, 3vh) solid transparent;
+  border-right: min(0.8vw, 3vh) solid transparent;
+  border-bottom: min(1.5vw, 4vh) solid #46a7dc;
+  background-color: transparent;
+  transition: border-bottom-color 500ms ease-out;
+}
+
+.set-temp > .btn-container > button:first-child:hover {
+  cursor: pointer;
+  border-bottom-color: #1170a3;
+}
+
+.set-temp > .btn-container > button:last-child {
+  width: 0;
+  height: 0;
+  border-bottom: transparent;
+  border-left: min(0.8vw, 3vh) solid transparent;
+  border-right: min(0.8vw, 3vh) solid transparent;
+  border-top: min(1.5vw, 4vh) solid #46a7dc;
+  background-color: transparent;
+  transition: border-top-color 500ms ease-out;
+}
+
+.set-temp > .btn-container > button:last-child:hover {
+  cursor: pointer;
+  border-top-color: #1170a3;
+}
+
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.thermostat_hvac {
+  width: 250px;
+  height: 250px;
+  background-color: #fff;
+  border-radius: 50%;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  box-shadow: 5px 5px 20px #b7c5d4, -5px -5px 20px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 10px;
+  transition: border-color 0.5s ease;
+}
+
+.hvac {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.temperature_hvac {
+  font-size: 45px;
+  font-weight: bold;
+  color: #666;
+  margin: 0;
+}
+/* 
+.degree{
+  visibility: hidden;
+} */
+
+.degree_hvac {
+  font-size: 45px;
+  color: #666;
+  margin-left: 5px;
+}
+.controls_hvac {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.control-button {
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  color: #666;
+  cursor: pointer;
+  font-size: 1.5rem;
+  height: 50px;
+  width: 50px;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  box-shadow: 5px 5px 20px #b7c5d4, -5px -5px 20px #ffffff;
+  transition: background-color 0.25s ease;
+}
+.minus {
+  margin-right: 20px;
+}
+.plus {
+  margin-left: 20px;
+}
+
+.control-button:active {
+  background-color: #ddd;
+}
+
+.title_hvac {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ------------- DATA PAGE---------------- */
+.range-btns {
+  margin-top: 15px;
+  margin-left: 65px;
+}
+
+.range-btns button {
+  border: none;
+  background-color: #fff;
+  padding: 5px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  color: #2c3e50;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  margin-right: 10px;
+}
+
+.range-btns button:hover {
+  background-color: #e0e5ec;
+}
+
+.graph {
+  margin-top: 15px;
+  margin-left: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 500px;
+  background-color: white;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* ------------- CONTROLS PAGE---------------- */
+
+.filter_card {
+  width: 49%;
+  height: fit-content;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(5, 120px);
+  grid-template-rows: repeat(2, 120px);
+  grid-gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 60px;
+}
+
+.filterDiv {
+  background-color: white;
+  border-radius: 20px;
+  /* box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.2); */
+  box-shadow: 5px 5px 20px #b7c5d4, -5px -5px 20px #ffffff;
+  width: 100px;
+  /* line-height: 100px; */
+  text-align: center;
+  margin: 2px;
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+/* ------------ About Us PAGE---------------- */
+.about_greeting {
+  /* padding-left: 15px; */
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+
+.about_text {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.mission {
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-size: larger;
+  font-style: italic;
+}
+
+.icon {
+  margin-right: 20px;
+  font-size: 175px;
+  color: white;
+}
+
+.instructions {
+  padding: 50px;
+  color: #37322f;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.about-card {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  opacity: 0;
+  transform: translateY(50px);
+  animation: reveal 1.5s ease forwards;
+}
+
+.about-card:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.about-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.about-card:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-card-body {
+  padding: 20px;
+}
+
+.about-twitter {
+  background-color: #1da1f2;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+.about-twitter h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-twitter p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.about-twitter a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #fff;
+  color: #1da1f2;
+  padding: 12px 24px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.about-twitter a:hover {
+  background-color: #1da1f2;
+  color: #fff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
+}

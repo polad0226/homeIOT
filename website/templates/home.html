@@ -1,0 +1,614 @@
+{% extends "base.html"%} {% block title %}Home{% endblock%} {% block content%}
+
+<div class="heading-container">
+  <h1 class="greeting">Home</h1>
+  <!-- <div class="global-clock">
+    <span></span>
+  </div> -->
+
+  <!-- <div class="watts-container">
+    <button onclick="getWatts()">Get Watts</button>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div> -->
+</div>
+
+<div class="cards-container">
+  <!-- Floor plan -->
+  <div class="card card-row1">
+    <svg
+      width="100%"
+      height="100%"
+      id="floor_plan"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 738.48 691.92"
+    >
+      <image
+        width="2950"
+        height="2890"
+        transform="scale(.24)"
+        xlink:href="{{ url_for('static', filename='FloorPlan.png') }}"
+      />
+
+      <line
+        class="door"
+        id="door-8"
+        x1="601.68"
+        y1="217.15"
+        x2="601.68"
+        y2="278.92"
+        fill="none"
+        stroke="#714d27"
+        stroke-miterlimit="10"
+        stroke-width="7"
+      />
+      <line
+        class="door"
+        id="door-9"
+        x1="479.82"
+        y1="457.71"
+        x2="479.82"
+        y2="625.34"
+        fill="none"
+        stroke="#714d27"
+        stroke-miterlimit="10"
+        stroke-width="7"
+      />
+
+      <g id="living_room">
+        <circle
+          id="light-1"
+          class="light-livingroom"
+          cx="438.16"
+          cy="141.93"
+          r="17.28"
+          fill="#faec4c"
+          opacity="0"
+          class="status"
+        />
+        <rect
+          class="window"
+          id="window-11"
+          x="596.56"
+          y="85.9"
+          width="10.08"
+          height="79.53"
+          fill="#46a7dc"
+        />
+        <rect
+          class="window"
+          id="window-12"
+          x="412.84"
+          y="57.99"
+          width="78.14"
+          height="8.65"
+          fill="#46a7dc"
+        />
+        <rect
+          class="window"
+          id="window-13"
+          x="382.98"
+          y="85.9"
+          width="10.33"
+          height="79.53"
+          fill="#46a7dc"
+        />
+      </g>
+
+      <g id="kitchen">
+        <circle
+          id="light-2"
+          class="light-kitchen"
+          cx="412.84"
+          cy="373.91"
+          r="13.94"
+          fill="#faec4c"
+          opacity="0"
+          class="status"
+        />
+        <rect
+          class="window"
+          id="window-14"
+          x="499.08"
+          y="426.92"
+          width="80.09"
+          height="11.16"
+          fill="#46a7dc"
+        />
+        <rect
+          class="window"
+          id="window-15"
+          x="597.03"
+          y="330.08"
+          width="8.93"
+          height="78.98"
+          fill="#46a7dc"
+        />
+      </g>
+
+      <g id="bath1">
+        <circle
+          id="light-3"
+          class="light-bath1"
+          cx="54.62"
+          cy="128.87"
+          r="11.68"
+          fill="#faec4c"
+          opacity="0"
+          class="status"
+        />
+        <rect
+          class="window"
+          id="window-16"
+          x="23.54"
+          y="105.43"
+          width="10.33"
+          height="57.77"
+          fill="#46a7dc"
+        />
+      </g>
+
+      <g id="bath2">
+        <circle
+          id="light-4"
+          class="light-bath2"
+          cx="69.66"
+          cy="259.72"
+          r="11.68"
+          fill="#faec4c"
+          opacity="0"
+          class="status"
+        />
+        <rect
+          class="window"
+          id="window-17"
+          x="23.54"
+          y="214.83"
+          width="10.33"
+          height="56.58"
+          fill="#46a7dc"
+        />
+      </g>
+
+      <g id="bdrm1">
+        <circle
+          id="light-5"
+          class="light-bdrm1"
+          cx="144.72"
+          cy="141.93"
+          r="17.28"
+          fill="#faec4c"
+          opacity="0"
+          class="status"
+        />
+        <rect
+          class="window"
+          id="window-17"
+          x="188.47"
+          y="57.99"
+          width="29.3"
+          height="10.05"
+          fill="#46a7dc"
+          stroke="#221f20"
+          stroke-miterlimit="10"
+          stroke-width=".5"
+        />
+        <rect
+          class="window"
+          id="window-18"
+          x="140.37"
+          y="57.99"
+          width="29.3"
+          height="10.05"
+          fill="#46a7dc"
+          stroke="#221f20"
+          stroke-miterlimit="10"
+          stroke-width=".5"
+        />
+      </g>
+
+      <g id="bdrm2">
+        <circle
+          id="light-6"
+          class="light-bdrm2"
+          cx="98.63"
+          cy="379.29"
+          r="17.28"
+          fill="#faec4c"
+          opacity="0"
+          class="status"
+        />
+        <rect
+          class="window"
+          id="window-19"
+          x="118.37"
+          y="427.29"
+          width="29.3"
+          height="10.05"
+          fill="#46a7dc"
+          stroke="#221f20"
+          stroke-miterlimit="10"
+          stroke-width=".5"
+        />
+        <rect
+          class="window"
+          id="window-20"
+          x="69.66"
+          y="427.29"
+          width="29.3"
+          height="10.05"
+          fill="#46a7dc"
+          stroke="#221f20"
+          stroke-miterlimit="10"
+          stroke-width=".5"
+        />
+      </g>
+
+      <g id="bdrm3">
+        <circle id="light-7" class="light-bdrm3" cx="216.16" cy="373.91"
+        r="17.28" fill="#faec4c"/ opacity="0" class="status">
+        <rect
+          class="window"
+          id="window-21"
+          x="218.7"
+          y="427.29"
+          width="29.3"
+          height="10.05"
+          fill="#46a7dc"
+          stroke="#221f20"
+          stroke-miterlimit="10"
+          stroke-width=".5"
+        />
+        <rect
+          class="window"
+          id="window-22"
+          x="169.98"
+          y="427.29"
+          width="29.3"
+          height="10.05"
+          fill="#46a7dc"
+          stroke="#221f20"
+          stroke-miterlimit="10"
+          stroke-width=".5"
+        />
+      </g>
+    </svg>
+  </div>
+
+  <!-- HVAC -->
+  <div class="card card-row1 card2">
+    <h1 class="title_hvac">HVAC</h1>
+    <div class="hvac">
+      <div class="controls_hvac">
+        <button class="control-button minus">
+          <i class="fa-solid fa-caret-down"></i>
+        </button>
+      </div>
+
+      <div id="thermostat" class="thermostat_hvac">
+        <span class="temperature_hvac"></span>
+      </div>
+
+      <div class="controls_hvac">
+        <button class="control-button plus">
+          <i class="fa-solid fa-caret-up"></i>
+        </button>
+      </div>
+    </div>
+
+    <span class="outer-temp"></span>
+    <li class="inner-temp">
+      <h5 style="margin-right: 10px">Inside Temperature:</h5>
+      <span style="font-weight: bold"></span>
+    </li>
+  </div>
+
+  <!-- light switches -->
+  <div class="card card-row2">
+    <div class="card3 unselectable">
+      <div
+        class="card3-item light-switch switch"
+        id="switch-1"
+        onclick="toggleSwitch(this)"
+      >
+        <i class="fa-solid fa-lightbulb"></i>
+        <div class="name">Living Room</div>
+        <div class="status">Off</div>
+      </div>
+      <div
+        class="card3-item light-switch switch"
+        id="switch-2"
+        onclick="toggleSwitch(this)"
+      >
+        <i class="fa-solid fa-lightbulb"></i>
+        <div class="name">Kitchen</div>
+        <div class="status">Off</div>
+      </div>
+      <div
+        class="card3-item light-switch switch"
+        id="switch-3"
+        onclick="toggleSwitch(this)"
+      >
+        <i class="fa-solid fa-lightbulb"></i>
+        <div class="name">Bathroom 1</div>
+        <div class="status">Off</div>
+      </div>
+      <div
+        class="card3-item light-switch switch"
+        id="switch-4"
+        onclick="toggleSwitch(this)"
+      >
+        <i class="fa-solid fa-lightbulb"></i>
+        <div class="name">Bathroom 2</div>
+        <div class="status">Off</div>
+      </div>
+      <div
+        class="card3-item light-switch switch"
+        id="switch-5"
+        onclick="toggleSwitch(this)"
+      >
+        <i class="fa-solid fa-lightbulb"></i>
+        <div class="name">Bedroom 1</div>
+        <div class="status">Off</div>
+      </div>
+      <div
+        class="card3-item light-switch switch"
+        id="switch-6"
+        onclick="toggleSwitch(this)"
+      >
+        <i class="fa-solid fa-lightbulb"></i>
+        <div class="name">Bedroom 2</div>
+        <div class="status">Off</div>
+      </div>
+      <div
+        class="card3-item light-switch switch"
+        id="switch-7"
+        onclick="toggleSwitch(this)"
+      >
+        <i class="fa-solid fa-lightbulb"></i>
+        <div class="name">Bedroom 2</div>
+        <div class="status">Off</div>
+      </div>
+      <div class="card3-item light-switch-more-control">
+        <a style="text-decoration: none; color: black" href="controls">
+          <i class="fa-solid fa-ellipsis"></i>
+          <div class="name">More Controls</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- weather card -->
+  <div class="card card-row2">
+    <div class="card2-container">
+      <h1 class="title">Weather</h1>
+
+      <div class="weather">
+        <div
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <div class="weather_temp">
+            <div class="temperature">
+              <h1 class="degree1" style="font-size: 60px"></h1>
+              <h1 style="font-size: 60px">&deg;F</h1>
+              <h1 class="degree" style="font-size: 60px"></h1>
+            </div>
+
+            <h1 class="weather-main"></h1>
+          </div>
+
+          <div class="weather-img">
+            <img class="weather-icon" width="100px" src="" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Lights
+
+  const livingRoom = document.getElementById('switch-1');
+  const kitchen = document.getElementById('switch-2');
+  const bathroom1 = document.getElementById('switch-3');
+  const bathroom2 = document.getElementById('switch-4');
+  const bedroom1 = document.getElementById('switch-5');
+  const bedroom2 = document.getElementById('switch-6');
+  const bedroom3 = document.getElementById('switch-7');
+
+  const checkLightSwitchToggle = () => {
+    const lightSwitches = Array.from(
+      document.getElementsByClassName('light-switch')
+    );
+    lightSwitches.forEach((lightSwitch, index) => {
+      const status = lightSwitch.querySelector('.status');
+      if (status.textContent === 'On') {
+        lightSwitch.classList.toggle('on');
+
+        const lightOn = document.querySelector(`#light-${index + 1}`);
+        // console.log(lightOn);
+
+        if (lightOn.style.opacity === '100') {
+          // console.log(lightOn);
+          lightOn.style.opacity = '0';
+        } else {
+          lightOn.style.opacity = '100';
+        }
+      }
+    });
+  };
+
+  fetch('http://localhost:8000/appliances')
+    .then((response) => response.json())
+    .then((house) => {
+      livingRoom.dataset.applianceId = house.livingRoom.overheadLight.id;
+      livingRoom.querySelector('.status').textContent = house.livingRoom
+        .overheadLight.isOn
+        ? 'On'
+        : 'Off';
+
+      kitchen.dataset.applianceId = house.kitchen.overheadLight.id;
+      kitchen.querySelector('.status').textContent = house.kitchen.overheadLight
+        .isOn
+        ? 'On'
+        : 'Off';
+
+      bathroom1.dataset.applianceId = house.bathroom1.overheadLight.id;
+      bathroom1.querySelector('.status').textContent = house.bathroom1
+        .overheadLight.isOn
+        ? 'On'
+        : 'Off';
+
+      bathroom2.dataset.applianceId = house.bathroom2.overheadLight.id;
+      bathroom2.querySelector('.status').textContent = house.bathroom2
+        .overheadLight.isOn
+        ? 'On'
+        : 'Off';
+
+      bedroom1.dataset.applianceId = house.masterBedroom.overheadLight.id;
+      bedroom1.querySelector('.status').textContent = house.masterBedroom
+        .overheadLight.isOn
+        ? 'On'
+        : 'Off';
+
+      bedroom2.dataset.applianceId = house.bedroom2.overheadLight.id;
+      bedroom2.querySelector('.status').textContent = house.bedroom2
+        .overheadLight.isOn
+        ? 'On'
+        : 'Off';
+
+      bedroom3.dataset.applianceId = house.bedroom3.overheadLight.id;
+      bedroom3.querySelector('.status').textContent = house.bedroom3
+        .overheadLight.isOn
+        ? 'On'
+        : 'Off';
+
+      checkLightSwitchToggle();
+    });
+
+  const switchButtons = document.querySelectorAll('.switch');
+
+  switchButtons.forEach(function (switchButton) {
+    switchButton.addEventListener('click', function () {
+      const id = switchButton.id.split('-')[1];
+      const lightOn = document.querySelector(`#light-${id}`);
+      // console.log(lightOn);
+
+      if (lightOn.style.opacity === '100') {
+        // console.log(lightOn);
+        lightOn.style.opacity = '0';
+      } else {
+        lightOn.style.opacity = '100';
+      }
+    });
+  });
+</script>
+
+<script>
+  // Thermo
+
+  function toggleSwitch(switchElem) {
+    const applianceId = switchElem.dataset.applianceId;
+
+    const options = {
+      method: 'HEAD',
+    };
+    fetch(
+      'http://localhost:8000/appliances/toggle/' + applianceId,
+      options
+    ).then((response) => {
+      if (response.status === 200) {
+        switchElem.classList.toggle('on');
+        const statusElem = switchElem.querySelector('.status');
+        const currentStatus = statusElem.textContent;
+        statusElem.textContent = currentStatus === 'Off' ? 'On' : 'Off';
+      }
+    });
+  }
+
+  const temperature = document.querySelector('.temperature_hvac');
+  const thermostat = document.querySelector('.thermostat_hvac');
+  const minusButton = document.querySelector('.minus');
+  const plusButton = document.querySelector('.plus');
+  const indoorTemp = document.querySelector('.indoor_temp');
+
+  minusButton.addEventListener('click', function () {
+    thermostat.style.borderColor = 'lightblue';
+    setTimeout(function () {
+      thermostat.style.borderColor = 'white';
+    }, 1000);
+  });
+
+  plusButton.addEventListener('click', function () {
+    thermostat.style.borderColor = 'lightcoral';
+    setTimeout(function () {
+      thermostat.style.borderColor = 'white';
+    }, 1000);
+  });
+
+  // const lightSwitches = document.querySelectorAll('.light-switch');
+  // const lights = document.querySelectorAll("circle[class *= 'light-']");
+  // lightsArray = [...lights];
+  // console.log(lightsArray);
+  // let flag = true;
+  // lightSwitches.forEach((light, index) => {
+  //   light.addEventListener('click', () => {
+  //     if (flag) {
+  //       lightsArray[index].setAttribute('opacity', '1');
+  //       flag = false;
+  //     } else {
+  //       lightsArray[index].setAttribute('opacity', '0');
+  //       flag = true;
+  //     }
+  //   });
+  // });
+
+  /**
+   * This function exists for testing purposes.
+   * It is an event handler for a "Get Watts" button that is also commented out.
+   *
+   * If you want to get the total watts for a scenario where the first two buttons "living room"
+   * and "kitchen" are turned on, uncomment this function and uncomment the div at the top of
+   * template with the class "watts-container".
+   */
+  /* function getWatts() {
+    let applianceId = document.getElementById('switch-1').dataset.applianceId;
+    const wattsContainer = document.querySelector('.watts-container');
+
+    fetch('http://localhost:8000/appliances/watts/' + applianceId)
+    .then(response => response.json())
+    .then(watts => {
+      console.log('Logging Watts switch 1...');
+      console.log(watts);
+
+      const span = wattsContainer.children[1];
+      span.textContent = `${watts} watts`;
+    });
+
+    applianceId = document.getElementById('switch-2').dataset.applianceId;
+    fetch('http://localhost:8000/appliances/watts/' + applianceId)
+    .then(response => response.json())
+    .then(watts => {
+      console.log('Logging Watts switch 2...');
+      console.log(watts);
+
+      const span = wattsContainer.children[2];
+      span.textContent = `${watts} watts`;
+    });
+
+    fetch('http://localhost:8000/appliances/watts')
+    .then(response => response.json())
+    .then(totalWatts => {
+      console.log('Logging Total Watts');
+      console.log(totalWatts);
+
+      const span = wattsContainer.children[3];
+      span.textContent = `${totalWatts} total watts`;
+    });
+  } */
+</script>
+
+{% endblock %}

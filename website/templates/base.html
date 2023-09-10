@@ -1,0 +1,88 @@
+<!-- base template for all websites (navbar) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script> -->
+
+  <link rel="stylesheet" href="/static/style.css" />
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+
+  <title>{% block title %}Home{% endblock%}</title>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="list-elements">
+      <ul class="nav-list">
+
+        <li class="global-clock">
+          <span></span>
+        </li>
+        
+        <li>
+          <a href="/" class="links">
+            <i class="bx bxs-home-alt-2"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="data">
+            <i class="bx bx-stats"></i>
+            <span class="links_name">Data</span>
+          </a>
+        </li>
+
+        <li class="control">
+          <a href="controls">
+            <i class="bx bxs-camera-home"></i>
+            <span class="links_name">Control</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="irritants">
+            <i class="bx bxs-virus"></i>
+            <span class="links_name">Irritants</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="about">
+            <i class="bx bxs-info-circle"></i>
+            <span class="links_name">About</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <section class="home-section">{% block content %}{% endblock %}</section>
+
+  <!-- <div>
+    <img src="{{ url_for('static', filename='FloorPlan.png') }}" alt="Image">
+
+  </div> -->
+  <script
+    src="https://kit.fontawesome.com/ae957b1da4.js"
+    crossorigin="anonymous"
+  >
+  </script>
+  <script src="{{url_for('static', filename='main.js')}}"></script>
+  <script src="{{url_for('static', filename='hvac.js')}}"></script>
+  <script src="{{url_for('static', filename='clock.js')}}"></script>
+</body>
+
+  <!-- <script
+    type="text/javascript"
+    src=""
+></script> -->
+</html>
